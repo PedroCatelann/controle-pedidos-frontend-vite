@@ -4,7 +4,6 @@ import { useSidebar } from "@/context/SidebarContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import { TbPackageExport } from "react-icons/tb";
 import { MdDeliveryDining, MdBarChart } from "react-icons/md";
-import { IoMenuSharp } from "react-icons/io5";
 import { LuPackageX } from "react-icons/lu";
 import { useAuth } from "@/context/AuthContext";
 import styled from "styled-components";
@@ -32,24 +31,6 @@ const StyledSider = styled(Sider)<{ $collapsed: boolean }>`
   }
 `;
 
-const ToggleButton = styled.button`
-  padding: 0.5rem;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: ${colors.primary.main};
-  color: ${colors.neutral.white};
-
-  &:hover {
-    background: ${colors.primary.hover};
-  }
-`;
-
 const MainContent = styled.main`
   flex: 1;
   overflow-y: auto;
@@ -63,7 +44,7 @@ export default function SidebarHamburger({
 }: {
   children: React.ReactNode;
 }) {
-  const { collapsed, toggle } = useSidebar();
+  const { collapsed } = useSidebar();
   const { roles } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();

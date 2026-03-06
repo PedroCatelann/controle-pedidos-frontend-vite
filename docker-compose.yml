@@ -1,0 +1,18 @@
+services:
+  frontend:
+    container_name: controle-pedidos-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_APP_BACKEND: ${VITE_APP_BACKEND}
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    networks:
+      - controle-pedidos-network
+
+networks:
+  controle-pedidos-network:
+    name: controle-pedidos-network
+    external: true
