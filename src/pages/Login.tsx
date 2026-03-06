@@ -57,6 +57,7 @@ export default function LoginPage() {
     <LoginContainer>
       <LoginCard title={<h1 style={{ textAlign: "center", margin: 0 }}>Login</h1>}>
         <form onSubmit={handleSubmit(onSubmit)}>
+          <Form layout="vertical" component="div">
           <Controller
             control={control}
             name="username"
@@ -100,6 +101,7 @@ export default function LoginPage() {
               Entrar
             </Button>
           </Form.Item>
+          </Form>
         </form>
       </LoginCard>
     </LoginContainer>

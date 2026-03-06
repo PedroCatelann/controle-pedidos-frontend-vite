@@ -150,6 +150,7 @@ const PedidoCadastro: React.FC = observer(() => {
                 rules={{ required: "O funcionário é obrigatório" }}
                 render={({ field }) => (
                   <Form.Item
+                    layout="vertical"
                     label="Funcionário que irá realizar a entrega"
                     htmlFor="funcionario"
                   >
@@ -178,7 +179,7 @@ const PedidoCadastro: React.FC = observer(() => {
                 name="nomeCliente"
                 rules={{ required: "Nome do cliente é obrigatório" }}
                 render={({ field }) => (
-                  <Form.Item label="Nome do Cliente" htmlFor="nomeCliente">
+                  <Form.Item layout="vertical" label="Nome do Cliente" htmlFor="nomeCliente">
                     <Input
                       id="nomeCliente"
                       disabled={parametros.operacao === "visualizar"}
@@ -196,7 +197,7 @@ const PedidoCadastro: React.FC = observer(() => {
                 name="telefone"
                 rules={{ required: "Telefone é obrigatório" }}
                 render={({ field }) => (
-                  <Form.Item label="Telefone" htmlFor="phone-input">
+                  <Form.Item layout="vertical" label="Telefone" htmlFor="phone-input">
                     <Input
                       id="phone-input"
                       disabled={parametros.operacao === "visualizar"}
@@ -219,7 +220,7 @@ const PedidoCadastro: React.FC = observer(() => {
                 control={control}
                 name="rua"
                 render={({ field }) => (
-                  <Form.Item label="Rua" htmlFor="rua">
+                  <Form.Item layout="vertical"label="Rua" htmlFor="rua">
                     <Input
                       id="rua"
                       disabled={parametros.operacao === "visualizar"}
@@ -236,7 +237,7 @@ const PedidoCadastro: React.FC = observer(() => {
                 control={control}
                 name="numero"
                 render={({ field }) => (
-                  <Form.Item label="Número" htmlFor="numero">
+                  <Form.Item layout="vertical" label="Número" htmlFor="numero">
                     <Input
                       id="numero"
                       disabled={parametros.operacao === "visualizar"}
@@ -254,7 +255,7 @@ const PedidoCadastro: React.FC = observer(() => {
                 control={control}
                 name="bairro"
                 render={({ field }) => (
-                  <Form.Item label="Bairro" htmlFor="bairro">
+                  <Form.Item layout="vertical" label="Bairro" htmlFor="bairro">
                     <Input
                       id="bairro"
                       disabled={parametros.operacao === "visualizar"}
@@ -271,7 +272,7 @@ const PedidoCadastro: React.FC = observer(() => {
                 control={control}
                 name="complemento"
                 render={({ field }) => (
-                  <Form.Item label="Complemento" htmlFor="complemento">
+                  <Form.Item layout="vertical" label="Complemento" htmlFor="complemento">
                     <Input
                       id="complemento"
                       disabled={parametros.operacao === "visualizar"}
@@ -289,7 +290,7 @@ const PedidoCadastro: React.FC = observer(() => {
                 control={control}
                 name="observacao"
                 render={({ field }) => (
-                  <Form.Item label="Observação" htmlFor="observacao">
+                  <Form.Item layout="vertical" label="Observação" htmlFor="observacao">
                     <Input
                       id="observacao"
                       disabled={parametros.operacao === "visualizar"}
