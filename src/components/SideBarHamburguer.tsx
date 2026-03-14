@@ -3,7 +3,7 @@ import { colors } from "@/styles/theme";
 import { useSidebar } from "@/context/SidebarContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import { TbPackageExport } from "react-icons/tb";
-import { MdDeliveryDining, MdBarChart } from "react-icons/md";
+import { MdDeliveryDining, MdBarChart, MdPersonAdd } from "react-icons/md";
 import { LuPackageX } from "react-icons/lu";
 import { useAuth } from "@/context/AuthContext";
 import styled from "styled-components";
@@ -65,6 +65,11 @@ export default function SidebarHamburger({
             key: "/admin/funcionario",
             icon: <MdDeliveryDining />,
             label: "Funcionários",
+          },
+          {
+            key: "/admin/criar-usuario",
+            icon: <MdPersonAdd />,
+            label: "Criar usuário",
           },
         ]
       : []),

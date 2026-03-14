@@ -16,6 +16,7 @@ import Metricas from "@/pages/Metricas";
 import Admin from "@/pages/Admin";
 import Funcionarios from "@/pages/Funcionarios";
 import FuncionarioOperacoes from "@/pages/FuncionarioOperacoes";
+import CriarUsuario from "@/pages/CriarUsuario";
 
 export default function App() {
   return (
@@ -91,6 +92,14 @@ export default function App() {
         element={
           <AdminLayout>
             <FuncionarioOperacoes />
+          </AdminLayout>
+        }
+      />
+      <Route
+        path="/admin/criar-usuario"
+        element={
+          <AdminLayout>
+            <CriarUsuario />
           </AdminLayout>
         }
       />
